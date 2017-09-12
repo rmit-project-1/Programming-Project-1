@@ -2,10 +2,10 @@
 	if(isset($_POST['username'])) $username = $_POST['username'];
 	if(isset($_POST['password'])) $password = $_POST['password'];
 
-
+$passwordenc = sha1($password);
 
 	$db = mysqli_connect("localhost", "root", "", "cars")  or die(mysqli_error($db));
-	$q = "select * from user where username='$username' and password='$password'";
+	$q = "select * from users where username='$username' and password='$passwordenc'";
 	$results = mysqli_query($db, $q) or die(mysqli_error($db));
     $success_msg = "Succefully logged in";
     $error_msg = "Ivalid login......Please register";
@@ -14,11 +14,10 @@
     {
         session_start();
         $_SESSION['username'] = $username;
-        header("Location:index.php");
-        echo "<p>$success_msg</p>";
+        header("Location:account.php");
         exit(0);
     }
-    echo "<p>$error_msg</p>";
+    print"<p>$error_msg</p>";
     header("Location:signup.php");
 
 ?>
