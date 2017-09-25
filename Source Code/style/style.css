@@ -1,0 +1,823 @@
+/* typicons - icons */
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/font-awesome-webfont.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/font-awesome-webfont.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/font-awesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url("../fonts/font-awesome-webfont.woff") format('woff'), /* Modern Browsers */
+       url("../fonts/font-awesome-webfont.ttf") format('truetype'), /* Safari, Android, iOS */
+       url("../fonts/font-awesome-webfont.svg#typicons") format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+/* titilium-web-regular - latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/titillium-web-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+       url('../fonts/titillium-web-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/titillium-web-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/titillium-web-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/titillium-web-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/titillium-web-v5-latin-regular.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+html, body {
+    height: 100%;
+}
+
+/* CSS - Setting up main font for the website & background image */
+body {
+    font-family: 'Titillium Web';
+    background: #250301 url("../img/bg.png");
+}
+
+.logo{
+  width: 120px;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -300px;
+}
+.wrapper:after {
+    content:"";
+    display:block;
+}
+
+.wrapper:after, footer{
+    height: 300px;
+
+}
+
+/* CSS - Setting up the fonts for header and footer */
+.navbar, footer {
+    position: relative;
+    font-family: 'Titillium Web';
+}
+
+.card {
+  border-radius: 0px;
+}
+
+.card-title {
+  font-size: 18px;
+  height: 42px
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-img-top {
+  padding: 4px;
+  width:  280px;
+  height: 176px;
+  margin: 0 auto;
+}
+
+.catelog-title-tier1 h6{
+  margin-bottom: 0px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f1c40f;
+  color: #FFF;
+}
+
+.catelog-tier1 {
+  padding: 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f1c40f;
+}
+
+.catelog-title-tier2 h6{
+  margin-bottom: 0px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #e67e22;
+  color: #FFF;
+}
+
+.catelog-tier2 {
+  padding: 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #e67e22;
+}
+
+.catelog-title-tier3 h6{
+  margin-bottom: 0px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: #FFF;
+}
+
+.catelog-tier3 {
+  padding: 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #e74c3c;
+}
+
+
+/*
+CHANGE PASS CSS
+*/
+.change_pass_box {
+  margin: 16px auto;
+  display: block;
+  width: 80%;
+  padding: 20px;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+.change_pass_box h5 {
+  color: #ccc;
+
+}
+
+.change_pass_box span {
+  color: #ccc;
+}
+
+/*
+FOUND CSS
+*/
+.found_box {
+  margin: 16px auto;
+  display: block;
+  width: 90%;
+  padding: 20px;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+.found_box h4 {
+  color: #ccc;
+}
+
+.found_box h5 {
+  color: #ccc;
+}
+
+
+.found_box span {
+  color: #ccc;
+}
+
+.found_box td {
+  vertical-align: top;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .found_box td {
+        padding-right: 0px;
+        padding-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+}
+/*
+SEARCH CSS
+*/
+.book_box {
+  margin: 16px auto;
+  display: block;
+  width: 70%;
+  padding: 20px;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .book_box {
+     margin: 16px auto;
+     display: block;
+     width: 90%;
+     padding: 20px;
+     background-color: #292b2c;
+     border-radius: 6px;
+    }
+}
+
+.book_box h4 {
+  color: #ccc;
+  text-align: center;
+}
+
+.book_box table {
+  width: 100%;
+}
+
+
+.book_form {
+  text-align: center;
+  display: block;
+}
+
+
+.book_input {
+  width: 90%;
+  padding: 6px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px auto;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.book_button {
+  margin: 8px auto;
+  width: 100%;
+}
+
+
+
+
+
+
+/*
+SEARCH CSS
+*/
+.search_box {
+  margin: 16px auto;
+  display: block;
+  width: 70%;
+  padding: 20px;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .search_box {
+     margin: 16px auto;
+     display: block;
+     width: 90%;
+     padding: 20px;
+     background-color: #292b2c;
+     border-radius: 6px;
+    }
+}
+
+.search_box h4 {
+  color: #ccc;
+  text-align: center;
+}
+
+.search_box table {
+  width: 100%;
+}
+
+
+.search_form {
+  text-align: center;
+  display: block;
+}
+
+
+.search_input {
+  width: 90%;
+  padding: 6px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px auto;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.search_button {
+  margin: 8px auto;
+  width: 100%;
+}
+/*
+NAV CCS
+*/
+
+/* CSS - Setting up the max width for the navigation bar & centre it in the middle */
+.navwidth {
+  width: 1200px;
+  display: inherit;
+  margin: 0 auto;
+}
+
+.drop-nav {
+  background-color: #292b2c;
+  color: #cccccc;
+}
+
+.drop-nav:hover {
+  color: white;
+  background: #292b2c;
+
+}
+
+
+/* CSS - Setting up the width to be responsive width with mobile devices */
+@media screen and (max-width: 991px) {
+    .navwidth {
+        width: 98%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .navlength-account {
+        width: 130px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .navlength-cart {
+        width: 70px;}
+}
+
+@media screen and (max-width: 991px) {
+    .fixednav {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .searchform  {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .searchbar {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .form-control {
+        width: auto;
+    }
+}
+
+
+/*
+SLIDER CCS
+*/
+#mainSlide  {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/*
+LOGIN CSS
+*/
+.login_box {
+  margin: 16px auto;
+  display: block;
+  width: 400px;
+  padding: 20px;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 360px) {
+    .login_box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login_box {
+        width: 80%;
+    }
+}
+
+.login_form {
+  text-align: center;
+  display: block;
+}
+
+.login_input {
+  width: 90%;
+  padding: 8px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px auto;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.login_button {
+  margin: 8px auto;
+}
+
+/*
+SIGN UP CSS
+*/
+
+.signup_box {
+  margin: 20px auto;
+  display: block;
+  width: 700px;
+  padding: 20px;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .signup_box{
+        width: 100%;
+    }
+}
+
+.signup_box h2 {
+  color: #ccc;
+  padding-bottom: 10px;
+}
+
+.signup_box h5 {
+  color: #ccc;
+  text-align: left;
+  display: block;
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+
+.signup_box table {
+  width: 100%;
+}
+
+.signup_box td {
+    vertical-align: top;
+    width: 50%
+}
+
+@media screen and (max-width: 768px) {
+    .signup_box td {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .date_table td {
+      display: inline-block;
+    }
+}
+
+
+.signup_form {
+  text-align: center;
+  display: block;
+}
+
+.signup_input {
+  width: 92%;
+  padding: 6px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px auto;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.date_input {
+  width: 90%;
+  padding: 6px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px auto;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+
+.signup_button {
+  margin: 8px auto;
+  width: 92%;
+}
+
+/*
+PRODUCT CSS
+*/
+
+.product_box {
+  margin: 0 auto;
+  width: 94%;
+  display: block;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 4px;
+}
+
+
+/*
+ACCOUNT CSS
+*/
+
+.account_box {
+  margin: 0 auto;
+  width: 94%;
+  display: block;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 4px;
+}
+
+.account_box h3 {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Titillium Web';
+}
+
+.account_box h5 {
+  padding-left: 20px;
+}
+
+.account_box li {
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.account_box hr {
+  width: 96%;
+  color: #ccc;
+}
+
+.account_link {
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+.account_link:hover {
+  color: #d9d9d9;
+  text-decoration:none;
+}
+
+.account_link:focus {
+  color: #d9d9d9;
+}
+
+/*
+LOCATION CSS
+*/
+
+.location_box {
+  margin: 0 auto;
+  width: 94%;
+  display: block;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 4px;
+}
+
+.location_box td {
+  vertical-align: top;
+  padding: 10px 20px;
+}
+
+.location_box ul {
+  padding: 8px 10px;
+  list-style-type: none;
+}
+
+
+.location_map {
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  display: block;
+  border-radius: 6px;
+}
+
+
+/*
+ABOUT CSS
+*/
+
+.about_box {
+  margin: 0 auto;
+  width: 94%;
+  display: block;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 4px;
+}
+
+.about_box h3 {
+  text-align: center;
+  padding: 20px
+}
+
+.about_social {
+  margin: 0 auto;
+}
+
+.about_vector {
+  padding: 20px;
+  width: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+    .about_vector {
+        display: none;
+    }
+}
+
+.about_text {
+  vertical-align: top;
+  padding: 20px;
+  font-size: 18px;
+  display: block;
+}
+
+/*
+CONTACT CSS
+*/
+
+.contact_details h2 {
+  padding: 14px 20px;
+  font-size: 32px;
+}
+
+.contact_details h4 {
+  padding-left: 20px;
+  font-size: 24px;
+}
+
+.contact_details td {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.contact_social {
+  padding: 10px;
+}
+
+.social_link {
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+.social_link:hover {
+  color: #d9d9d9;
+  text-decoration:none;
+}
+
+.social_link:focus {
+  color: #d9d9d9;
+}
+
+.contact_details {
+    margin: 20px auto;
+    background-color: #292b2c;
+    display: block;
+    width: 70%;
+    color: #ccc;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 991px) {
+    .contact_details {
+        width: 100%;
+    }
+}
+
+
+.map {
+  margin: 0 auto;
+  width: 70%;
+  height: 300px;
+  display: block;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 991px) {
+    .map {
+        width: 100%;
+    }
+}
+
+.contact_box {
+  margin: 20px auto;
+  display: block;
+  width: 70%;
+  padding: 20px;
+  background-color: #292b2c;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 991px) {
+    .contact_box {
+        width: 100%;
+    }
+}
+
+.contact_form {
+  text-align: center;
+  display: block;
+}
+
+.contact_input {
+  padding: 8px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px ;
+  width: 44%;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.contact_message {
+  padding: 8px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 8px ;
+  width: 90%;
+  background-color: #cccccc;
+  color: #292b2c;
+}
+
+.contact_button {
+  margin: 8px auto;
+  width: 90%;
+}
+
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #292b2c;
+
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #292b2c;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #292b2c;
+  opacity: 1;
+
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #292b2c;
+  opacity: 1;
+
+}
+
+
+/*
+FOOTER CCS
+*/
+footer {
+  padding: 10px;
+  background-color: #292b2c;
+
+}
+
+.footer_container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 0px;
+}
+
+
+.footer_logo {
+  width: 180px;
+}
+
+.nav_footer {
+  font-size: 16px;
+  color: #a6a6a6;
+  width: 160px;
+  padding: 2px;
+}
+
+.nav_footer:hover {
+  color: #d9d9d9;
+}
