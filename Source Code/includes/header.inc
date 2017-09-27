@@ -20,7 +20,51 @@
       $( "#datepicker2" ).datepicker({dateFormat: 'yy/mm/dd'});
     } );
     </script>
+    <?php
+        $current_date = date('Y-m-d');
+        $pick = date('Y-m-d', strtotime("2017-09-19"));
+        $drop = date('Y-m-d', strtotime("2017-09-21"));
 
+
+        $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
+        $count = "SELECT * FROM fleet";
+        $count_result = mysqli_query($db, $count) or die(mysqli_error($db));
+        $num_rows = mysqli_num_rows($count_result);
+
+
+
+        for ($i=0; $i <= $num_rows ; $i++) {
+          $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
+          $id_collect = "SELECT id FROM fleet WHERE id ='".$i."' ";
+          $id_collect_results = mysqli_query($db,$id_collect) or die(mysqli_error());
+              while ($row = mysqli_fetch_array($id_collect_results))
+              {
+                $id=$row["id"];
+
+                $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
+                $carid_collect = "SELECT * FROM booking WHERE carid ='".$id."' ";
+                $carid_collect_results = mysqli_query($db,$carid_collect) or die(mysqli_error());
+                while ($row = mysqli_fetch_array($carid_collect_results))
+                {
+                  $carid=$row["carid"];
+                  $pickdate=$row["pickdate"];
+                  $dropdate=$row["dropdate"];
+
+                  if ($carid == $id) {
+
+                    if ($pickdate <= $current_date && $current_date <= $dropdate) {
+                      $booked = "UPDATE fleet SET booked = 1 WHERE (id ='".$carid."') ";
+                      mysqli_query($db,$booked);
+                    }   else {
+                      $available = "UPDATE fleet SET booked = 0 WHERE (id ='".$carid."') ";
+                      mysqli_query($db,$available);
+                    }
+                  } else {
+                    echo "no match <br>";
+                  }
+                }
+        }}
+     ?>
   </head>
   <body>
     <div class="wrapper">
@@ -63,6 +107,7 @@
           <div class="dropdown-menu drop-nav" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item drop-nav" href="account.php"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
             <a class="dropdown-item drop-nav" href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+            <a class="dropdown-item drop-nav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
             <a class="dropdown-item drop-nav" href="signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
           </div>
         </li>
