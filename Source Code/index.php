@@ -1,17 +1,17 @@
 <?php
-  include 'includes/header.inc';
   session_start();
+  include 'includes/header.inc';
     if(!isset($_SESSION['hire'])){
     {
         $_SESSION['hire'] = array();
     }
-  }
+    }
 ?>
 <br>
   <div class="container">
     <div class="search_box">
       <h4>Search for your dream car today.</h4>
-
+      <?php echo $current_date ?>
       <form method="post" class="search_from" action="">
       <table>
         <tr>
@@ -48,7 +48,6 @@
   if(isset($_POST['submit']))
   {
 
-
   if(isset($_POST['location']))
         $location = $_POST['location'];
 
@@ -59,13 +58,13 @@
 
 
 
-  $db = mysqli_connect("localhost","root","","cars") or die(mysqli_error());
+  $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
 
   print"<div class='container'>";
   print"<div class='found_box'>";
   print"<h4>Dream Cars Available</h4>";
   print "<span>Locaion: " . $location . "<br>Tier: " . $tier . "</span><br>";
-  $q = "SELECT * FROM fleet WHERE (location ='".$location."' AND tier ='".$tier."' AND booked ='".true."')";
+  $q = "SELECT * FROM fleet WHERE (location ='".$location."' AND tier ='".$tier."' AND booked ='".false."')";
       $results = mysqli_query($db,$q) or die(mysqli_error());
 
       while ($row = mysqli_fetch_array($results))

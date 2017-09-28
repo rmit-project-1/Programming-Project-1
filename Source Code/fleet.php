@@ -1,7 +1,7 @@
 <?php
-  $page_title="TechARQ - Catelogue Page";
-  include 'includes/header.inc';
   session_start();
+  $page_title="TechARQ - Fleet Page";
+  include 'includes/header.inc';
 ?>
 <br>
 
@@ -12,10 +12,10 @@
   </div>
   <div class='card-group'>
   <?php
-    $db = mysqli_connect("localhost","root","","cars") or die(mysqli_error());
+    $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
     //Execute a query(select)
     $tier = "1";
-      $q = "SELECT * FROM fleet WHERE (tier ='".$tier."' )";
+      $q = "SELECT * FROM fleet WHERE (tier ='".$tier."' ) LIMIT 4";
       $results = mysqli_query($db,$q) or die(mysqli_error());
 
 
@@ -28,8 +28,6 @@
       											$valuePower=$row["power"];
       											$valueImg=$row["img"];
       											$valuePrice=$row["cost"];
-                            $valueLocation=$row["location"];
-
 
     print"<div class='card'>";
       print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
@@ -37,8 +35,6 @@
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
         print"<span class='card-text'>Price: $valuePrice</span><br>";
-        print"<span class='card-text'>Location: $valueLocation</span><br><br>";
-        print"<a href='#' class='btn btn-success'>Book</a>";
       print"</div>";
 
     print"</div>";
@@ -59,10 +55,10 @@
   </div>
   <div class='card-group'>
   <?php
-    $db = mysqli_connect("localhost","root","","cars") or die(mysqli_error());
+    $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
     //Execute a query(select)
     $tier = "2";
-      $q = "SELECT * FROM fleet WHERE (tier ='".$tier."' )";
+      $q = "SELECT * FROM fleet WHERE (tier ='".$tier."' ) LIMIT 4";
       $results = mysqli_query($db,$q) or die(mysqli_error());
 
 
@@ -75,8 +71,6 @@
       											$valuePower=$row["power"];
       											$valueImg=$row["img"];
       											$valuePrice=$row["cost"];
-                            $valueLocation=$row["location"];
-
 
     print"<div class='card'>";
       print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
@@ -84,8 +78,6 @@
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
         print"<span class='card-text'>Price: $valuePrice</span><br>";
-        print"<span class='card-text'>Location: $valueLocation</span><br><br>";
-        print"<a href='#' class='btn btn-success'>Book</a>";
       print"</div>";
 
     print"</div>";
@@ -107,10 +99,10 @@
   </div>
   <div class='card-group'>
   <?php
-    $db = mysqli_connect("localhost","root","","cars") or die(mysqli_error());
+    $db = mysqli_connect("localhost","mccrewco_mcm","Project69","mccrewco_cars") or die(mysqli_error());
     //Execute a query(select)
     $tier = "3";
-      $q = "SELECT * FROM fleet LIMIT 4 WHERE (tier ='".$tier."' )";
+      $q = "SELECT * FROM fleet WHERE (tier ='".$tier."' ) LIMIT 4";
       $results = mysqli_query($db,$q) or die(mysqli_error());
 
 
@@ -123,8 +115,6 @@
       											$valuePower=$row["power"];
       											$valueImg=$row["img"];
       											$valuePrice=$row["cost"];
-                            $valueLocation=$row["location"];
-
 
     print"<div class='card'>";
       print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
@@ -132,8 +122,6 @@
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
         print"<span class='card-text'>Price: $valuePrice</span><br>";
-        print"<span class='card-text'>Location: $valueLocation</span><br><br>";
-        print"<a href='#' class='btn btn-success'>Book</a>";
       print"</div>";
 
     print"</div>";

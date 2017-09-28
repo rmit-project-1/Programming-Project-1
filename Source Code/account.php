@@ -1,7 +1,8 @@
 <?php
+  ob_start();
+  session_start();
   $page_title="TechARQ - My Account Page";
   include 'includes/header.inc';
-  session_start();
   $username = $_SESSION["username"];
   if(!isset($_SESSION['username']))
     {
