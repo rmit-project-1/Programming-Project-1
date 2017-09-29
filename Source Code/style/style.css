@@ -551,6 +551,8 @@ ACCOUNT CSS
 }
 
 .account_box h5 {
+  font-size: 24px;
+  padding-top: 12px;
   padding-left: 20px;
 }
 
@@ -563,6 +565,16 @@ ACCOUNT CSS
   width: 96%;
   color: #ccc;
 }
+
+.account_box table {
+ margin: 10px;
+}
+
+.account_box td {
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
 
 .account_link {
   font-size: 16px;
