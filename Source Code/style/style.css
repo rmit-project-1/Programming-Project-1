@@ -92,6 +92,18 @@ body {
   border-color: #f1c40f;
 }
 
+
+@media screen and (max-width: 768px) {
+    .catelog-tier1  {
+	display: block;
+        width: 92%;
+    }
+    .card-group {
+	display: block;
+}
+}
+
+
 .catelog-title-tier2 h6{
   margin-bottom: 0px;
   font-size: 18px;
@@ -105,6 +117,16 @@ body {
   border-style: solid;
   border-width: 2px;
   border-color: #e67e22;
+}
+
+@media screen and (max-width: 768px) {
+    .catelog-tier2  {
+	display: block;
+        width: 92%;
+    }
+    .card-group {
+	display: block;
+}
 }
 
 .catelog-title-tier3 h6{
@@ -122,6 +144,16 @@ body {
   border-color: #e74c3c;
 }
 
+@media screen and (max-width: 768px) {
+    .catelog-tier3  {
+	display: block;
+        width: 92%;
+    }
+    .card-group {
+	display: block;
+}
+}
+
 
 /*
 CHANGE PASS CSS
@@ -135,6 +167,12 @@ CHANGE PASS CSS
   border-radius: 6px;
 }
 
+@media screen and (max-width: 768px) {
+    .change_pass_box {
+        width: 100%;
+    }
+}
+
 .change_pass_box h5 {
   color: #ccc;
 
@@ -143,6 +181,17 @@ CHANGE PASS CSS
 .change_pass_box span {
   color: #ccc;
 }
+
+/*
+FLEET CSS
+
+
+.fleet_img {
+width:100%;
+height:auto;
+}
+
+*/
 
 /*
 FOUND CSS
@@ -154,6 +203,7 @@ FOUND CSS
   padding: 20px;
   background-color: #292b2c;
   border-radius: 6px;
+  color: #ccc;
 }
 
 .found_box h4 {
@@ -188,7 +238,7 @@ SEARCH CSS
 .book_box {
   margin: 16px auto;
   display: block;
-  width: 70%;
+  width: 90%;
   padding: 20px;
   color: #ccc;
   background-color: #292b2c;
@@ -238,6 +288,24 @@ SEARCH CSS
 .book_button {
   margin: 8px auto;
   width: 100%;
+}
+
+.selected_car img {
+width:100%;
+height:auto;
+}
+
+.selected_car td {
+padding-left: 10px;
+width:50%;
+height:auto;
+}
+@media screen and (max-width: 768px) {
+	.selected_car td {
+	display:block;
+	width:80%;
+}
+
 }
 
 
@@ -322,6 +390,10 @@ NAV CCS
   color: white;
   background: #292b2c;
 
+}
+
+#logout {
+  display: none;
 }
 
 
@@ -530,6 +602,113 @@ PRODUCT CSS
   border-radius: 4px;
 }
 
+/*
+ACCOUNT BOOKING CSS
+*/
+
+.account_booking_box {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  color: #ccc;
+  background-color: #292b2c;
+  border-radius: 4px;
+}
+
+.account_booking_box img {
+  width:100%;
+  height: auto;
+}
+
+.account_booking_box table {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  margin: auto;
+  padding:20px;
+  width:96%;
+}
+
+.account_booking_box th {
+  color:#D5DDE5;;
+  background:#7f8c8d;
+  border-bottom:4px solid #292b2c;
+  border-right: 1px solid #292b2c;
+  font-size:18px;
+  font-weight: 600;
+  padding:6px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.account_booking_box tr {
+  border-top: 1px solid #292b2c;
+  border-bottom-: 1px solid #292b2c;
+  color:#292b2c;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+.account_booking_box td {
+  background:#bdc3c7;
+  padding:6px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  border-right: 1px solid #292b2c;
+}
+
+.account_booking_box h5 {
+  font-size: 24px;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+.account_booking_box h6 {
+  font-size: 24px;
+
+}
+
+
+@media screen and (max-width: 991px) {
+	.account_booking_box th {
+  	  font-size:14px;
+	}
+
+	.account_booking_box td {
+ 	  font-size:14px;
+	}
+
+	.account_booking_box h6 {
+ 	  font-size: 16px;
+	}
+    
+}
+
+@media screen and (max-width: 991px) {
+	.account_booking_box th {
+  	  font-size:11px;
+	}
+
+	.account_booking_box td {
+ 	  font-size:11px;
+	}
+
+	.account_booking_box h6 {
+ 	  font-size: 12px;
+	}
+
+	
+    
+}
+
+
+
+
+
 
 /*
 ACCOUNT CSS
@@ -542,6 +721,11 @@ ACCOUNT CSS
   color: #ccc;
   background-color: #292b2c;
   border-radius: 4px;
+}
+
+.details {
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .account_box h3 {
@@ -596,16 +780,44 @@ LOCATION CSS
 
 .location_box {
   margin: 0 auto;
-  width: 94%;
+  width: 100%;
   display: block;
   color: #ccc;
   background-color: #292b2c;
   border-radius: 4px;
 }
 
+.location_box table {
+  width:100%
+}
+
+.location_box hr {
+  width: 96%;
+  color: #ccc;
+}
+
+.location_box h4 {
+  font-size: 24px;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+
 .location_box td {
   vertical-align: top;
   padding: 10px 20px;
+}
+
+@media screen and (min-width: 991px) {
+    .details_location {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .location_box td {
+        display: block;
+    }
 }
 
 .location_box ul {
@@ -616,7 +828,7 @@ LOCATION CSS
 
 .location_map {
   margin: 0 auto;
-  width: 600px;
+  width: 100%;
   height: 300px;
   display: block;
   border-radius: 6px;
