@@ -10,6 +10,10 @@
   			header("Location:index.php");
   			exit(0);
   } else {
+
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  
+
   	if(!isset($_SESSION['remove']))
   	{
   		$_SESSION['remove'] = array();

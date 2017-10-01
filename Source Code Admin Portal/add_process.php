@@ -7,7 +7,9 @@ if(!isset($_SESSION['username']))
       sleep(1);
       header("Location:index.php");
       exit(0);
-  }
+  } else {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+}
 
 if(isset($_POST['make']))
       $make = $_POST['make'];
@@ -41,7 +43,7 @@ if ($tier == 1) {
     $image = 'img/cars/tier 2/'.$_FILES['image']['name'];
 } elseif ($tier == 3) {
     move_uploaded_file($_FILES['image']['tmp_name'], '../mcm.mccrew.com.au/img/cars/tier 3/'.$_FILES['image']['name']);
-    $image = 'img/cars/tier 2/'.$_FILES['image']['name'];
+    $image = 'img/cars/tier 3/'.$_FILES['image']['name'];
 }
 
 $db = mysqli_connect("localhost", "mccrewco_mcm","Project69", "mccrewco_cars")  or die(mysqli_error($db));

@@ -9,7 +9,11 @@
   			sleep(1);
   			header("Location:index.php");
   			exit(0);
-  }
+  } else {
+
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  
+}
 
 ?>
 
@@ -21,7 +25,7 @@
     <h3>Car is added to the fleet</h3>
     <p>Car has been added to the fleet</p>
     <br>
-    <a href="add.php" style="margin:0 auto; display: block; width: 200px;" class="btn btn-danger">Return</a>
+    <a href="add.php" style="margin:0 auto; display: block; width: 200px;" class="btn btn-success">Return</a>
     <br>
 
 

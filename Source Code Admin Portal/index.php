@@ -2,7 +2,10 @@
   ob_start();
   $page_title="TechARQ - Log In Page";
   include 'includes/header.inc';
-
+  if(isset($_SESSION['username']))
+  {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  }
 ?>
 
 

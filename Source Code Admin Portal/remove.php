@@ -8,14 +8,18 @@
   			sleep(1);
   			header("Location:index.php");
   			exit(0);
-    }
+    } else {
+ 
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  
+}
 
 
 ?>
 <br>
   <div class="container">
     <div class="search_box">
-      <h4>Add more cars to the fleet.</h4>
+      <h4>Remove cars from fleet.</h4>
       <?php echo "Date: " . $current_date; ?>
       <form method="post" class="search_from" action="">
       <table>
