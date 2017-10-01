@@ -104,7 +104,7 @@
           <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span class="fa fa-user" aria-hidden="true"></span> My Account</a>
           <div class="dropdown-menu drop-nav" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item drop-nav" href="index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-            <a class="dropdown-item drop-nav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            <a id="logout" class="dropdown-item drop-nav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
           </div>
         </li>
       </div>
