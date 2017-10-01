@@ -1,6 +1,12 @@
 <?php
   session_start();
   include 'includes/header.inc';
+  if(isset($_SESSION['username']))
+  {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  }
+
+
     if(!isset($_SESSION['hire'])){
     {
         $_SESSION['hire'] = array();
@@ -11,7 +17,7 @@
   <div class="container">
     <div class="search_box">
       <h4>Search for your dream car today.</h4>
-      <?php echo $current_date ?>
+      <span>Date: </span><?php echo $current_date ?>
       <form method="post" class="search_from" action="">
       <table>
         <tr>

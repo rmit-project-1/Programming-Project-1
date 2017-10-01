@@ -1,7 +1,11 @@
 <?php
+  session_start();
   $page_title="TechARQ - Sign Up Page";
   include 'includes/header.inc';
-  session_start();
+  if(isset($_SESSION['username']))
+  {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  }
 ?>
 
 
@@ -16,13 +20,13 @@
           <tr>
             <td>
               <h5>Personal Information</h5>
-              <input class="signup_input" type="text" placeholder="User Name" name="username" >
+              <input class="signup_input" type="text" placeholder="User Name" name="username" required>
               <br>
 
-              <input class="signup_input" type="text" placeholder="First Name" name="firstname" >
+              <input class="signup_input" type="text" placeholder="First Name" name="firstname" required>
               <br>
 
-              <input class="signup_input" type="text" placeholder="Last Name" name="lastname" >
+              <input class="signup_input" type="text" placeholder="Last Name" name="lastname" required>
               <br>
 
 							<select class="signup_input" type="text" name="gender">
@@ -36,7 +40,7 @@
               <table class="date_table">
                 <tr>
                   <td style="width:30%;">
-                    <select class="date_input" type="text" name="year"  tabindex="0">
+                    <select class="date_input" type="text" name="year"  tabindex="0" required>
                       <option value="" selected="">Year</option>
                         <option value="2007">2007</option>
                         <option value="2006">2006</option>
@@ -149,7 +153,7 @@
                     </select>
                   </td>
                   <td style="width:30%;">
-                    <select  class="date_input" type="text" name="month" readonly="readonly">
+                    <select  class="date_input" type="text" name="month" readonly="readonly" required>
                         <option value="" selected="">Month </option>
                         <option value="01">Jan</option>
                         <option value="02">Feb</option>
@@ -166,7 +170,7 @@
                     </select>
                   </td>
                   <td style="width:30%;">
-                    <select  class="date_input" type="text" name="day" readonly="readonly">
+                    <select  class="date_input" type="text" name="day" readonly="readonly" required>
                       <option value="" selected="">Day</option>
                       <option value="01">1</option>
                       <option value="02">2</option>
@@ -208,25 +212,25 @@
             </td>
             <td>
               <h5>Contact Information</h5>
-              <input class="signup_input" type="email" placeholder="Email" name="email" >
+              <input class="signup_input" type="email" placeholder="Email" name="email" required>
               <br>
 
               <input class="signup_input" type="text" placeholder="Mobile" name="phone" >
               <br>
 
-              <input class="signup_input" type="text" placeholder="Street" name="street" >
+              <input class="signup_input" type="text" placeholder="Street" name="street" required>
               <br>
 
-							<input class="signup_input" type="text" placeholder="Suburb" name="suburb" >
-							<br>
+	      <input class="signup_input" type="text" placeholder="Suburb" name="suburb" required>
+	      <br>
 
-              <input class="signup_input" type="text" placeholder="Postcode" name="postcode" >
+              <input class="signup_input" type="text" placeholder="Postcode" name="postcode" required>
               <br>
 
-              <input class="signup_input" type="text" placeholder="State" name="state" >
+              <input class="signup_input" type="text" placeholder="State" name="state" required>
               <br>
 
-              <input class="signup_input" type="text" placeholder="Country" name="country" >
+              <input class="signup_input" type="text" placeholder="Country" name="country" required>
             </td>
           </tr>
         </table>
@@ -234,23 +238,26 @@
           <tr>
             <td>
               <h5>Credentials</h5>
-              <input class="signup_input" type="password" placeholder="Password" name="password" >
+              <input class="signup_input" type="password" placeholder="Password" name="password" required>
               <br>
 
-              <input class="signup_input" type="password" placeholder="Confirm Password" name="cpassword" >
+              <input class="signup_input" type="password" placeholder="Confirm Password" name="cpassword" required>
               <br>
             </td>
           </tr>
         </table>
 
+	 <table>
+          <tr>
+            <td>
 
+        	<input class="form-check-input" type="checkbox" checked="checked">  <span style="color: #cccccc;">Sign Up For Our Newsletter</span>
+        	<br>
+        	<button class="signup_button btn btn-primary" type="submit">Sign Up</button>
 
-        <input class="form-check-input" type="checkbox" checked="checked">  <span style="color: #cccccc;">Sign Up For Our Newsletter</span>
-        <br>
-
-        <button class="signup_button btn btn-primary" type="submit">Sign Up</button>
-
-
+    		</td>
+          </tr>
+        </table>
 
 
 

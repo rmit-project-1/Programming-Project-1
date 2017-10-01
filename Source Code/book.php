@@ -10,6 +10,7 @@
         header("Location: login.php");
         exit(0);
       } else {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
         if(!isset($_SESSION['hire']))
         {
           $_SESSION['hire'] = array();
@@ -67,7 +68,7 @@
                             $_SESSION["picklocation"]=$row["location"];
 
 
-    print"<table>";
+    print"<table class='selected_car'>";
     print"<tr>";
       print"<td>";
       print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";

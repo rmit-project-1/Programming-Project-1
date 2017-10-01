@@ -2,6 +2,10 @@
   session_start();
   $page_title="TechARQ - Fleet Page";
   include 'includes/header.inc';
+  if(isset($_SESSION['username']))
+  {
+	echo "<script> $('#logout').css('display', 'block'); </script>";
+  }
 ?>
 <br>
 
@@ -30,7 +34,7 @@
       											$valuePrice=$row["cost"];
 
     print"<div class='card'>";
-      print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
+      print"<img class='card-img-top fleet_img' src='$valueImg' alt='Card image cap'>";
       print"<div class='card-block'>";
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
@@ -73,7 +77,7 @@
       											$valuePrice=$row["cost"];
 
     print"<div class='card'>";
-      print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
+      print"<img class='card-img-top fleet_img' src='$valueImg' alt='Card image cap'>";
       print"<div class='card-block'>";
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
@@ -117,7 +121,7 @@
       											$valuePrice=$row["cost"];
 
     print"<div class='card'>";
-      print"<img class='card-img-top' src='$valueImg' alt='Card image cap'>";
+      print"<img class='card-img-top fleet_img' src='$valueImg' alt='Card image cap'>";
       print"<div class='card-block'>";
         print"<h5 class='card-title'>$valueMake $valueModel $valueYear</h5>";
         print"<span class='card-text'>Engine: $valueEngine <br>Power: $valuePower</span><br>";
