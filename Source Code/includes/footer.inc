@@ -11,9 +11,8 @@
           <td>
             <a class="nav-link nav_footer" href="index.php">Home</a>
             <a class="nav-link nav_footer" href="fleet.php">Fleet</a>
-            <a class="nav-link nav_footer" href="location.php">Fleet</a>
+            <a class="nav-link nav_footer" href="location.php">Locations</a>
             <a class="nav-link nav_footer" href="about.php">About Us</a>
-            <a class="nav-link nav_footer" href="contact.php">Contact Us</a>
           </td>
           <td style="width: 210px;">
             <a class="nav-link nav_footer" href="#">Site Map</a>
