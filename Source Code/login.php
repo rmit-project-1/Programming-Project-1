@@ -52,7 +52,7 @@
 
     <div class="container" >
 
-      <span style="color: #cccccc;" class="psw">Forgot your password? <a href="#">Click Here</a></span>
+      <span style="color: #cccccc;" class="psw">Forgot your password? <a href="reset.php">Click Here</a></span>
 
     </div>
 

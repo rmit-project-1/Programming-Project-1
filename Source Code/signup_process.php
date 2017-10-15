@@ -1,4 +1,7 @@
 <?php
+ob_start();
+
+
 if(isset($_POST['username']))
       $username = $_POST['username'];
 
@@ -46,10 +49,27 @@ if(isset($_POST['country']))
 
 $dob = $day . '/' . $month . '/' . $year;
 
+$confirmcode = rand();
+
 $db = mysqli_connect("localhost", "mccrewco_mcm","Project69", "mccrewco_cars")  or die(mysqli_error($db));
-$q = "insert into users values( null,'$username', Sha('$password'), '$email', '$firstname', '$lastname', '$gender', '$dob', '$phone', '$street', '$suburb', '$state', '$postcode', '$country', 'false',  now())";
+$q = "insert into users values( null,'$username', Sha('$password'), '$email', '$firstname', '$lastname', '$gender', '$dob', '$phone', '$street', '$suburb', '$state', '$postcode', '$country', 'false', '$confirmcode', now())";
 mysqli_query($db, $q) or die(mysqli_error($db));
+
+
+
+$message =
+"Hi $username,
+
+Confirm your email by clicking on the link ncurses_panel_below
+http://mcm.mccrew.com.au/confirm.php?username=$username&code=$confirmcode
+
+regards,
+
+Mega Cars Melbourne HQ";
+
+mail($email, 'Confirm Email - MCM', $message, 'From: support@mcm.mccrrew.com.au');
 
 header("Location:index.php");
 
+ob_end_flush();
 ?>
